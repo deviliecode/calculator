@@ -1,0 +1,459 @@
+/* COLORS */
+/* ------------------------------------------------------------------------------------------------ */
+:root{
+    /* color for calculator */
+    --color-primary-button: #454547;
+    --color-body-calculator: #E8E9ED;
+    --color-secondary-button: #706E70;
+    --color-teriary-button: #BB5661;
+    --color-body-top: #030303;
+    --color-screen: #C8D7D1;
+    --color-screen-wrapper: #F1F7FA;
+    --color-button-text: #FBF9FA;
+    --color-button-screen: #080D0A;
+    --color-button-stroke: #6B6D6C;
+    --color-button-stroke2: #B8B5AC;
+    /* others colors */
+    --color-nonCaclulator-text: #8EA361;
+}
+*{
+    text-decoration: none;
+}
+@font-face {
+    font-family: DS-digi;
+    src: url("./DS-DIGI.TTF") format('truetype');
+}
+
+/* BODY AND MAIN */
+/* ------------------------------------------------------------------------------------------------ */
+body{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    background: linear-gradient(34deg, rgb(235, 240, 240) 0%, rgb(237, 249, 247) 100%);
+}
+main{
+    min-width: 640px;
+    max-width: 1440px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* INFO */
+/* ------------------------------------------------------------------------------------------------ */
+.info{
+    width: 53px;
+    height: 57px;
+    position: absolute;
+    left: 64px;
+    top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.i{
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    cursor: pointer;
+    color: var(--color-button-text);
+    font-family: "Rubik";
+}
+.info-box{
+    width: 53px;
+    height: 53px;
+    background-color: var(--color-secondary-button);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid var(--color-button-stroke2);
+    cursor: pointer;
+    transition: box-shadow .2s, translateX .2s, translateY .2s;
+}
+.info-box:hover{
+    box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.info-box:active{
+    transform: translateX(2px) translateY(-2px);
+    box-shadow: none;
+    transition: box-shadow .2s;
+}
+
+/* WRAPPER */
+/* ------------------------------------------------------------------------------------------------ */
+.wrapper{
+    width: 640px;
+    height: 752px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    width: 546px;
+    height: 701px;
+    border-radius: 15px 15px 50px 50px;
+    background-color: var(--color-body-calculator);
+    box-shadow: 6px 4px 5px 2px rgba(0, 0, 0, 0.14);
+    position: relative;
+}
+.screen{
+    border: 3px solid #000;
+    border-radius: 15px;
+    width: 394px;
+    height: 101px;
+    background-color: var(--color-screen);
+    position: absolute;
+    z-index: 1;
+    top: calc(77px + 24px);
+    right: calc(33px + 43px);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+}
+.screen-text-output{
+    margin: 0;
+    font-family: DS-digi;
+    font-weight: 400;
+    font-size: 80px;
+    color: #000;
+    text-align: right;
+    line-height: 80px;
+    padding: 3px 5px;
+}
+.optima-container{
+    display: flex;
+}
+.optima{
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    font-family: "Rubik";
+    padding-top: 2px;
+}
+.n75508{
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    font-family: "Rubik";
+    position: absolute;
+    z-index: 1;
+    top: 29px;
+    left: 216px;
+    margin: 0;
+}
+.WG-home{
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 99px;
+    border-radius: 5px;
+    width: 118px;
+    height: 36px;
+    background: linear-gradient(270deg, #5c4b31 0%, #46442f 100%);
+    color: white;
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 12px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.digits8{
+    position: absolute;
+    width: 31px;
+    height: 35px;
+    right: 40px;
+    top: 31px;
+}
+.digts{
+    margin: 0;
+    font-family: "Rubik";
+    font-style: italic;
+    line-height: 20px;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+i{  
+    font-family: "Rubik";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: black;
+    position: relative;
+    bottom: 10px;
+    color: white;
+}
+.buttons-container{
+    width: 496px;
+    height: 355px;
+    position: absolute;
+    bottom: 44px;
+    left: 25px;
+}
+.button{
+    cursor: pointer;
+}
+.button:active{
+    transform: translateX(2px) translateY(-2px);
+    box-shadow: none;
+    transition: box-shadow .2s;
+}
+.primary-button{
+    border-radius: 10px;
+    width: 86px;
+    height: 64px;
+    background: var(--color-primary-button);
+    border: 1px solid var(--color-button-stroke);
+    box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: absolute;
+    font-weight: 400;
+    font-size: 48px;
+    font-family: "Rubik";
+    color: var(--color-button-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dot{
+    bottom: 0;
+}
+#b0{
+    bottom: 0;
+    left: calc(128px - 26px);
+}
+#bCnageSign{
+    bottom: 0px;
+    left: calc(230px - 26px);
+}
+#b1{
+    bottom: calc(121px - 44px);
+}
+#b2{
+    bottom: calc(121px - 44px);
+    left: calc(128px - 26px);
+}
+#b3{
+    bottom: calc(121px - 44px);
+    left: calc(230px - 26px);
+}
+#b4{
+    bottom: calc(198px - 44px);
+}
+#b5{
+    left: calc(128px - 26px);
+    bottom: calc(198px - 44px);
+}
+#b6{
+    left: calc(230px - 26px);
+    bottom: calc(198px - 44px);
+}
+#b7{
+    top: 60px;
+}
+#b8{
+    top: 60px;
+    left: calc(128px - 26px);
+}
+#b9{
+    top: 60px;
+    left: calc(230px - 26px);
+}
+.small-button{
+    border: 1px solid var(--color-button-stroke2);
+    border-radius: 10px;
+    width: 83px;
+    height: 47px;
+    position: absolute;
+    box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.5);
+    background: var(--color-secondary-button);
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--color-button-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Mminus{
+    left: calc(128px - 25px);
+}
+#Mplus{
+    left: calc(231px - 25px);
+}
+#CE{
+    right: calc(129px - 26px);
+}
+#ONsleshC{
+    right: 0;
+    background: var(--color-teriary-button);
+}
+.secondary-button{
+    border: 1px solid var(--color-button-stroke2);
+    border-radius: 10px;
+    width: 86px;
+    height: 64px;
+    box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.5);
+    background: var(--color-secondary-button);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 48px;
+    text-align: center;
+    color: var(--color-button-text);
+}
+#toPower{
+    right: 0;
+    top: 60px;
+}
+#percent{
+    top: 60px;
+    right: calc(128px - 26px);
+}
+#multiply{
+    bottom: calc(198px - 44px);
+    right: calc(128px - 26px);
+}
+#divide{
+    bottom: calc(198px - 44px);
+    right: 0;
+}
+#minus{
+    right: 0;
+    bottom: calc(121px - 44px);
+}
+#equal{
+    right: 0;
+    bottom: 0;
+}
+.plus{
+    border: 1px solid var(--color-button-stroke2);
+    border-radius: 10px;
+    width: 86px;
+    height: 141px;
+    box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.5);
+    background: var(--color-secondary-button);
+    position: absolute;
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 78px;
+    color: var(--color-button-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#plus{
+    bottom: 0;
+    right: calc(128px - 26px);
+}
+
+/* DOWN-LEFT-SECTION */
+/* ------------------------------------------------------------------------------------------------ */
+.down-left-section{
+    width: 192px;
+    height: 83px;
+    position: absolute;
+    bottom: 51px;
+    right: 71px;
+}
+.CreatedWithText{
+    margin: 0;
+    font-family: "Rubik Wet Paint";
+    /* color: var(--color-nonCaclulator-text); */
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black;
+    cursor: default;
+}
+.logo-wrapper{
+    width: 192px;
+    height: 64px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo-container{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.base-box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.JS-logo-box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 8px;
+    position: absolute;
+    background-color: #EFDB50;
+    text-align: end;
+    transition: transform .2s;
+    box-shadow: 0 14px 18px 1px rgb(0, 0, 0, 0.24);
+}
+.JS-logo-box:hover{
+    transform: translateX(4px) translateY(-4px);
+}
+.js-logo{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    position: relative;
+    bottom: -20px;
+    cursor: default;
+}
+.HTML-logo-box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 8px;
+    position: absolute;
+    transition: transform .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E44D27;
+    box-shadow: 0 14px 18px 1px rgb(0, 0, 0, 0.24);
+}
+.HTML-logo-box:hover{
+    transform: translateX(4px) translateY(-4px);
+}
+.CSS-logo-box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 8px;
+    position: absolute;
+    transition: transform .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F62AE;
+    box-shadow: 0 14px 18px 1px rgb(0, 0, 0, 0.24);
+}
+.CSS-logo-box:hover{
+    transform: translateX(4px) translateY(-4px);
+}

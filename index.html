@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="info">
+            <div class="info-box" id="info-box">
+                <p class="i">i</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="calculator">
+                <svg style="position: absolute; z-index: 0" width="546" height="253" viewBox="0 0 546 253" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_2_4)">
+                      <path d="M0 9.83127C0 4.44021 4.34002 0.0168824 9.72812 -0.161907C213.677 -6.92941 332.3 -6.29721 536.24 -0.132905C541.641 0.0303469 546 4.45881 546 9.8623V235.608C546 240.954 541.729 245.358 536.388 245.598C333.625 254.683 215.191 256.119 9.54918 245.655C4.23494 245.385 0 240.992 0 235.671V9.83127Z" fill="#030303" />
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_2_4" x="0" y="-22" width="563" height="274.968" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                        <feOffset dx="12" dy="-12" />
+                        <feGaussianBlur stdDeviation="2.5" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0" />
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_4" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_4" result="shape" />
+                      </filter>
+                    </defs>
+                </svg>
+                <svg style="position: absolute; z-index: 1; top: 77px; right: 33px;" width="480" height="149" viewBox="0 0 480 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 15C0 6.71573 6.71573 0 15 0H465C473.284 0 480 6.71573 480 15V128.635C480 136.667 473.641 143.276 465.616 143.611C292.922 150.819 189.241 150.218 14.4481 143.558C6.3976 143.251 0 136.631 0 128.575V15Z" fill="#F1F7FA" />
+                </svg>
+                <svg style="position: absolute; z-index: 1; left: 4px; top: 5px;" width="12" height="233" viewBox="0 0 12 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="12" height="233" rx="6" fill="url(#paint0_linear_48_56)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_48_56" x1="0" y1="116.5" x2="12" y2="116.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#363B37"/>
+                    <stop offset="1" stop-color="#232927"/>
+                    </linearGradient>
+                    </defs>
+                </svg> 
+                <div class="screen">
+                    <p class="screen-text-output" id="screen-text-output"></p>
+                </div>
+                <div class="optima-container" style="position: absolute; z-index: 1; top: 24px; left: 49px;">
+                    <svg width="30" height="33" viewBox="0 0 30 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 1L29 9V24.5L22.5 32.5H8L1 24.5V9L8 1H22.5ZM8 24.5V9H22.5V24.5H8Z" fill="#D9D9D9" stroke="black"/>
+                    </svg>
+                    <p class="optima">optima</p>
+                </div>
+                <p class="n75508">75508</p>
+                <div class="WG-home">WG Home</div>
+                <div class="digits8">
+                    <p class="digts">8<br><i>digits</i></p>
+                </div>
+                <div class="buttons-container">
+                    <div class="button toScreen primary-button" id="dot">.</div>
+                    <div class="button toScreen primary-button numbers" id="b0">0</div>
+                    <div class="button primary-button" id="bCnageSign">+/-</div>
+                    <div class="button toScreen primary-button numbers" id="b1">1</div>
+                    <div class="button toScreen primary-button numbers" id="b2">2</div>
+                    <div class="button toScreen primary-button numbers" id="b3">3</div>
+                    <div class="button toScreen primary-button numbers" id="b4">4</div>
+                    <div class="button toScreen primary-button numbers" id="b5">5</div>
+                    <div class="button toScreen primary-button numbers" id="b6">6</div>
+                    <div class="button toScreen primary-button numbers" id="b7">7</div>
+                    <div class="button toScreen primary-button numbers" id="b8">8</div>
+                    <div class="button toScreen primary-button numbers" id="b9">9</div>
+                    <div class="button small-button" id="MRC">MRC</div>
+                    <div class="button small-button" id="Mminus">M-</div>
+                    <div class="button small-button" id="Mplus">M+</div>
+                    <div class="button small-button" id="CE">CE</div>
+                    <div class="button small-button" id="ONsleshC">ON/c</div>
+                    <div class="button toScreen secondary-button" id="toPower">**</div>
+                    <div class="button secondary-button" id="percent">%</div>
+                    <div class="button toScreen secondary-button sign" id="multiply">*</div>
+                    <div class="button toScreen secondary-button sign" id="divide">/</div>
+                    <div class="button toScreen secondary-button sign" id="minus">-</div>
+                    <div class="button secondary-button" id="equal">=</div>
+                    <div class="button toScreen plus sign" id="plus">+</div>
+                </div>
+            </div>
+        </div>
+        <div class="down-left-section">
+            <p class="CreatedWithText">Created with:</p>
+            <div class="logo-wrapper">
+                <div class="logo-container HTML">
+                    <div class="base-box"></div>
+                    <div class="HTML-logo-box">
+                        <svg width="22" height="32" viewBox="0 0 22 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.9943 27.5404L9.52563 30.3554V0.5H21.4525L18.9943 27.5404Z" fill="#FF6C39" stroke="#FF6C39"/>
+                            <path d="M0.536099 5.0127H17.8333V8.24346H4.51282H3.97288L4.01429 8.78181L4.29634 12.4485L4.33186 12.9101H4.79487H16.9385L15.8928 24.1515L8.47291 26.2715L1.34615 23.8959V19.3973H4.85897V21.4358V21.8335L5.24654 21.923L8.91321 22.7691L9.0559 22.802L9.19381 22.7528L13.1425 21.3425L13.4744 21.224V20.8717V16.6409V16.1409H12.9744H1.31249L0.536099 5.0127Z" fill="white" stroke="white"/>
+                        </svg>  
+                    </div>
+                </div>
+                <div class="logo-container CSS">
+                    <div class="base-box"></div>
+                    <div class="CSS-logo-box">
+                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.9943 27.5404L7.52563 30.3554V0.5H19.4525L16.9943 27.5404Z" fill="#347DC6" stroke="#347DC6"/>
+                            <path d="M8.00737 12.4999L16.9004 12.3689L15.8696 24.2897L8.59968 26.4734L1.85083 24.0173L1.38333 19.3481H4.82488L5.04301 20.9534L5.0791 21.2189L5.32019 21.3359L8.92019 23.0828L9.10656 23.1732L9.30229 23.1053L12.9023 21.8568L13.2385 21.7402V21.3844V15.6817V15.1817H12.7385H1.29584L1.07876 12.1864L10.1892 8.46283L9.99609 7.50002L0.743857 7.57229L0.535123 4.5H17.4673L17.2446 8.01211L7.825 11.5316L8.00737 12.4999Z" fill="white" stroke="white"/>
+                        </svg>                                                     
+                    </div>
+                </div>
+                <div class="logo-container js">
+                    <div class="base-box"></div>
+                    <div class="JS-logo-box">
+                        <p class="js-logo">JS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
